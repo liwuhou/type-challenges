@@ -1,11 +1,5 @@
 import { Alike, Expect } from '@type-challenges/utils'
 
-type cases = [
-  Expect<Alike<MyReadonly2<Todo1>, Readonly<Todo1>>>,
-  Expect<Alike<MyReadonly2<Todo1, 'title' | 'description'>, Expected>>,
-  Expect<Alike<MyReadonly2<Todo2, 'title' | 'description'>, Expected>>,
-]
-
 interface Todo1 {
   title: string
   description?: string
@@ -23,3 +17,9 @@ interface Expected {
   readonly description?: string
   completed: boolean
 }
+
+type cases = [
+  Expect<Alike<MyReadonly2<Todo1>, Readonly<Todo1>>>,
+  Expect<Alike<MyReadonly2<Todo1, 'title' | 'description'>, Expected>>,
+  Expect<Alike<MyReadonly2<Todo2, 'title' | 'description'>, Expected>>,
+]
