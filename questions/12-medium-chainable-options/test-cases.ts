@@ -14,11 +14,6 @@ const result2 = a
   .option('name', 'last name')
   .get()
 
-type cases = [
-  Expect<Alike<typeof result1, Expected1>>,
-  Expect<Alike<typeof result2, Expected2>>,
-]
-
 type Expected1 = {
   foo: number
   bar: {
@@ -30,3 +25,8 @@ type Expected1 = {
 type Expected2 = {
   name: string
 }
+
+type cases = [
+  Expect<Alike<typeof result1, Expected1>>,
+  Expect<Alike<typeof result2, Expected2>>,
+]
