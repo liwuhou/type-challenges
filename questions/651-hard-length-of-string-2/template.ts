@@ -1,1 +1,1 @@
-type LengthOfString<S extends string> = number
+type LengthOfStringHard<S extends string> = number

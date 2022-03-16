@@ -1,4 +1,4 @@
-type MyAwaited<P extends Promise<unknown>> =
+type MyAwaited<P> =
   P extends Promise<infer T> ?
     T extends Promise<unknown> ?
       MyAwaited<T> :
