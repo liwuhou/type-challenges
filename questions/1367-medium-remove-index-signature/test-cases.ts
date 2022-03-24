@@ -17,9 +17,8 @@ type Baz = {
   baz: string
 }
 
-
 type cases = [
-  Expect<Equal< RemoveIndexSignature<Foo>, { foo(): void }>>,
-  Expect<Equal< RemoveIndexSignature<Bar>, { bar(): void }>>,
-  Expect<Equal< RemoveIndexSignature<Baz>, { bar(): void, baz: string }>>
+  Expect<Equal<RemoveIndexSignature<Foo>, { foo(): void }>>,
+  Expect<Equal<RemoveIndexSignature<Bar>, { bar(): void }>>,
+  Expect<Equal<RemoveIndexSignature<Baz>, { bar(): void, baz: string }>>
 ]
