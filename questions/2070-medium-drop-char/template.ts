@@ -1,5 +1,3 @@
-
-
 type DropChar<S extends string, C extends string, Result extends string = ''> =
   S extends `${infer F}${infer L}`
     ? C extends ''
@@ -10,4 +8,3 @@ type DropChar<S extends string, C extends string, Result extends string = ''> =
         ? DropChar<L, C, Result>
         : DropChar<L, C, `${Result}${F}`>
     : Result
-
