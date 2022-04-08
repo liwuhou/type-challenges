@@ -1,4 +1,4 @@
-import { Equal, Expect, ExpectFalse, NotEqual } from '@type-challenges/utils'
+import { Equal, Expect, ExpectFalse } from '@type-challenges/utils'
 
 type cases = [
   Expect<Equal<TupleToNestedObject<['a'], string>, {a: string}>>,
